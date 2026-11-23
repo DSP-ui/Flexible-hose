@@ -1,0 +1,172 @@
+
+/* GENERAL SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f3f5;
+    color: #222;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* TITLE */
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+/* INPUT SECTION */
+
+.input-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    background: white;
+    color: #222;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2675c7;
+    box-shadow: 0 0 3px rgba(38, 117, 199, 0.3);
+}
+
+
+/* REMOVE NUMBER INPUT ARROWS */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+
+/* BUTTON */
+
+button {
+    grid-column: 1 / -1;
+    width: 220px;
+    padding: 13px;
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    background: #2675c7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #185b9f;
+}
+
+button:active {
+    background: #124779;
+}
+
+
+/* TECHNICAL DRAWING */
+
+.diagram {
+    margin-top: 20px;
+    padding: 10px;
+    background: white;
+    border: none;
+    text-align: center;
+}
+
+.diagram svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.diagram svg text {
+    font-family: "Segoe UI", Arial, sans-serif;
+    fill: black;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+
+    .input-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .diagram {
+        margin-top: 15px;
+        padding: 0;
+    }
+
+}
